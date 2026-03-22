@@ -330,7 +330,30 @@ section {
   box-shadow: 0 0 35px rgba(201,168,76,0.6);
 }
 
-.btn-secondary {
+.btn-download {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 13px 32px;
+  background: transparent;
+  color: var(--purple-light);
+  border: 1px solid var(--purple-light);
+  clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.btn-download:hover {
+  background: rgba(176,125,224,0.12);
+  box-shadow: 0 0 20px rgba(176,125,224,0.3);
+  transform: translateY(-2px);
+}
+
+
   font-family: 'Rajdhani', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
@@ -1723,6 +1746,7 @@ nav .nav-links a.active::after {
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="#contact" class="btn-secondary">Contact Me</a>
+        <a href="https://docs.google.com/document/d/1AINvqXYOcXJOp-33tu5J_yQUd7rXgWpf/edit?usp=drive_link&ouid=102195162891927468141&rtpof=true&sd=true" target="_blank" class="btn-download">⬇ Download CV</a>
       </div>
     </div>
   </div>
