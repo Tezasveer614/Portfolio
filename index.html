@@ -354,26 +354,56 @@ section {
 }
 
 
+.btn-secondary {
   font-family: 'Rajdhani', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  padding: 13px 32px;
+  padding: 13px 36px;
   background: transparent;
   color: var(--blue);
-  border: 1px solid var(--blue);
+  border: 1px solid rgba(74,168,216,0.7);
   clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: all 0.3s;
+  transition: all 0.35s ease;
+  box-shadow:
+    0 0 8px rgba(74,168,216,0.15),
+    inset 0 0 8px rgba(74,168,216,0.05);
+  text-shadow: 0 0 10px rgba(74,168,216,0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(74,168,216,0.06) 0%,
+    transparent 50%,
+    rgba(74,168,216,0.06) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
 }
 
 .btn-secondary:hover {
-  background: rgba(74,168,216,0.1);
-  box-shadow: 0 0 20px rgba(74,168,216,0.3);
+  color: #a8dcf0;
+  border-color: rgba(74,168,216,1);
+  box-shadow:
+    0 0 18px rgba(74,168,216,0.45),
+    0 0 35px rgba(74,168,216,0.2),
+    inset 0 0 14px rgba(74,168,216,0.08);
+  text-shadow: 0 0 16px rgba(74,168,216,0.9);
   transform: translateY(-2px);
+}
+
+.btn-secondary:hover::before {
+  opacity: 1;
 }
 
 @keyframes fadeUp {
